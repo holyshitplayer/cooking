@@ -1,0 +1,29 @@
+@mixin gr {
+    font-family: "Golos Text", sans-serif;
+    font-weight: 400;
+}
+
+@mixin gm {
+    font-family: "Golos Text", sans-serif;
+    font-weight: 500;
+}
+
+@mixin gsb {
+    font-family: "Golos Text", sans-serif;
+    font-weight: 600;
+}
+
+@mixin nl {
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+}
+
+@mixin nsb {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+}
+
+@mixin nb {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}

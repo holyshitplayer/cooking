@@ -1,0 +1,106 @@
+.cities-slider-description
+    width: calc( 100% / 3 )
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.cities-slider-content
+    width: calc( (100% / 3) * 2 )
+    display: flex
+    flex-direction: column
+
+.cities-slider-title
+    font-size: 24px
+    +nsb
+
+.cities-slider-subtitle
+    margin-bottom: 32px
+    +nl
+
+.cities-slider-description-text
+    margin-bottom: 64px
+
+.show-all-cities-button
+    background-color: #D5F24B
+    color: #1A191C
+    padding: 12px 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 32px
+    box-shadow: 2px 2px 0px #000000
+    border-radius: 12px
+    transition: background-color .15s ease
+    +gm
+    &:hover
+        background-color: lighten(#D5F24B, 15%)
+        svg
+            transform: translateY(3px)
+
+.show-all-cities-button svg
+    transition: transform .15s ease
+
+.cities-slider-navigation
+    display: flex
+    justify-content: space-between
+    margin-bottom: 16px
+
+.cities-slider-text
+    margin: 0
+    +nl
+    span
+        +nb
+
+.cities-slider-navigation-buttons
+    display: flex
+    gap: 32px
+
+.cities-slider-items
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.cities-slider-item
+    width: calc( 100% / 5 )
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 8px
+    border-radius: 12px
+    background-color: #FFE66D
+    color: #1A191C
+    box-shadow: 2px 2px 0px #000000
+    padding: 16px 12px
+    transition: background-color .15s ease
+    &:hover
+        background-color: lighten(#FFE66D, 15%)
+
+.cities-slider-item-image
+    width: 100%
+    max-height: 100px
+    object-fit: contain
+
+.cities-slider-item-title
+    +gsb
+
+.cities-slider-pagination
+    margin-top: 32px
+    display: flex
+    justify-content: center
+    gap: 8px
+
+.cities-slider-pagination-bullet
+    display: block
+    background-color: rgba(247, 251, 247, 0.5)
+    border-radius: 4px
+    width: 24px
+    height: 4px
+    cursor: pointer
+
+.cities-slider-pagination-bullet-active
+    display: block
+    background-color: rgba(247, 251, 247, 1)
+    border-radius: 4px
+    width: 24px
+    height: 4px
+    cursor: pointer

@@ -1,0 +1,37 @@
+.header-navigation
+    height: 64px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.header-logo
+    font-size: 20px
+    text-transform: uppercase
+    transition: color .15s ease
+    +nb
+    &:hover
+        color: #FF6B6B
+
+.header-links, .header-social-links
+    list-style-type: none
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    gap: 32px
+    
+.header-link
+    padding: 22px 0
+    transition: color .15s ease
+    +gm
+    &:hover
+        color: #FF6B6B
+
+.header-social-link svg path
+    transition: fill .15s ease
+
+.header-social-link
+    padding: 22px 0
+    &:hover
+        svg path
+            fill: #FF6B6B
