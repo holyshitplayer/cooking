@@ -1,0 +1,27 @@
+.ukraine-map-description
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 64px
+
+.ukraine-map-title
+    font-size: 24px
+    +nsb
+
+.ukraine-map-subtitle
+    +nl
+
+.ukraine-map-wrapper
+    display: flex
+    justify-content: center
+    svg
+        max-width: 1000px
+        width: auto
+        height: auto
+        path
+            cursor: pointer
+            pointer-events: all
+            fill: rgba(255,255,255,0)
+            transition: fill .15s ease
+            &:hover
+                fill: rgba(255,255,255,.1)

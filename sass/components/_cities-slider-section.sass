@@ -55,6 +55,14 @@
     display: flex
     gap: 32px
 
+.cities-slider-previous svg, .cities-slider-next svg
+    transition: filter .15s ease
+
+.cities-slider-previous, .cities-slider-next
+    &:hover
+        svg
+            filter: drop-shadow(0 0 2px #ffffff)
+
 .cities-slider-items
     display: flex
     justify-content: space-between
