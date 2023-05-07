@@ -1,0 +1,50 @@
+.cities-cards-description
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-bottom: 64px
+
+.cities-cards-title
+    font-size: 24px
+    +nsb
+
+.cities-cards-subtitle
+    margin-bottom: 32px
+    +nl
+
+.cities-cards-masonry
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: masonry
+    gap: 32px
+
+.cities-card
+    display: flex
+    flex-direction: column
+    gap: 16px
+    background-color: #252427
+    border-radius: 12px
+    box-shadow: 4px 4px 0px #000000
+    transition: background-color .15s ease
+    &:hover
+        background-color: #302F32
+        .cities-card-image
+            opacity: 0.75
+
+.cities-card-image
+    border-top-left-radius: 12px
+    border-top-right-radius: 12px
+    width: 100%
+    opacity: 0.6
+    transition: opacity .15s ease
+
+.cities-card-description
+    padding: 0 0 24px 16px
+
+.cities-card-name
+    font-size: 20px
+    +gm
+
+.cities-card-attraction
+    font-size: 14px

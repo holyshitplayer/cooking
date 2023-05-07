@@ -122,3 +122,23 @@ if (regionPaths) {
         });
     });
 }
+
+let navLinks = document.querySelectorAll(".header-link");
+navLinks.forEach(link => {
+    let linkPathname = link.pathname;
+    let pathname = window.location.pathname;
+    if (linkPathname == pathname) {
+        link.classList.add("current");
+    } else if (pathname == "/cooking/" || pathname == "/") {
+        navLinks[0].classList.add("current");
+    }
+});
+
+let ticker = document.querySelector(".ticker");
+if (ticker) {
+    let tickerList = document.querySelector(".ticker-list"),
+        tickerItems = document.querySelector(".ticker-items"),
+        clone = tickerItems.cloneNode(true);
+    
+    tickerList.prepend(clone);
+}
