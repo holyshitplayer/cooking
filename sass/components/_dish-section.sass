@@ -1,0 +1,117 @@
+.dish
+    height: calc( 100vh - 64px )
+    height: calc(var(--vh, 1vh) * 100 - 64px)
+    display: grid
+    align-items: center
+    padding: 0
+    
+.dish-info-title
+    max-width: 350px
+    margin-bottom: 32px
+    font-size: 56px
+    line-height: 64px
+    +nsb
+
+.dish-info-subtitle
+    margin-top: 32px
+    font-size: 40px
+    line-height: normal
+    +nl
+
+.dish-info-description
+    margin-bottom: 32px
+
+.cook-it-now-button
+    background-color: #AC1C31
+    color: #F7FFF7
+    padding: 12px 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 32px
+    box-shadow: 2px 2px 0px #000000
+    border-radius: 12px
+    transition: background-color .15s ease
+    +gm
+    &:hover
+        background-color: lighten(#AC1C31, 10%)
+        svg
+            transform: translateY(3px)
+
+.cook-it-now-button svg
+    transition: transform .15s ease
+    path
+        fill: #F7FFF7
+
+.dish-info
+    width: calc(50% - 32px)
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.back-to-all-cities-link
+    display: flex
+    align-items: center
+    gap: 12px
+    +gm
+
+.back-to-all-cities-link svg
+    transition: filter .15s ease
+
+.back-to-all-cities-link
+    &:hover
+        svg
+            filter: drop-shadow(0 0 2px #ffffff)
+
+.dish-preview
+    width: calc(50% - 32px)
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+.dish-preview-circle
+    position: absolute
+    width: 420px
+    height: 420px
+    border-radius: 50%
+    display: block
+    border: 0.5px solid #F7FFF7
+    z-index: -10
+    opacity: 0.5
+    &:nth-child(1)
+        transform: translateY(-30%)
+    &:nth-child(2)
+        transform: translateY(-15%)
+
+.dish-preview-articles
+    position: absolute
+    display: grid
+    gap: 64px
+    grid-template-columns: repeat(3, 1fr)
+    place-items: center
+
+.dish-preview-article
+    filter: blur(1px)
+    &:nth-child(1)
+        margin: 0 auto
+        grid-row: 1
+        grid-column: 2
+    &:nth-child(2)
+        grid-row: 2
+        grid-column: 1
+        justify-self: start
+    &:nth-child(3)
+        grid-row: 2
+        grid-column: 3
+        justify-self: end
+    &:nth-child(4)
+        grid-row: 3
+        grid-column: 1
+    &:nth-child(5)
+        grid-row: 3
+        grid-column: 3
+
+.dish-preview-image
+    max-width: 500px
+    max-height: 400px

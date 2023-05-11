@@ -17,6 +17,32 @@
     flex-direction: column
     align-items: center
 
+.media-image, .media-video
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 12px
+    opacity: 0.75
+    visibility: visible
+    transition: opacity .3s ease, visibility .3s ease
+    &.hidden
+        opacity: 0
+        visibility: hidden
+
+.media-image
+    display: block
+
+.media-video
+    display: none
+
+.media-container
+    width: 100%
+    height: 600px
+    background: rgba(255, 255, 255, 0.1)
+    box-shadow: 4px 4px 0px #000000
+    border-radius: 12px
+    margin-bottom: 32px
+
 .get-started-title
     max-width: 350px
     margin-bottom: 32px
@@ -50,14 +76,6 @@
 
 .get-started-button svg
     transition: transform .15s ease
-
-.media-container
-    width: 100%
-    height: 500px
-    background: rgba(255, 255, 255, 0.1)
-    box-shadow: 4px 4px 0px #000000
-    border-radius: 12px
-    margin-bottom: 32px
 
 .watch-video-button
     background-color: #ACC1D3

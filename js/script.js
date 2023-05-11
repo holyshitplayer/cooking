@@ -9,8 +9,16 @@ window.addEventListener("resize", (e) => {
 });
 
 let swiper = new Swiper(".swiper", {
-    slidesPerView: 5,
-    spaceBetween: 16,
+    breakpoints: {
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 8
+        },
+        576: {
+            slidesPerView: 5,
+            spaceBetween: 16
+        }
+    },
     pagination: {
         el: ".cities-slider-pagination",
         bulletClass: "cities-slider-pagination-bullet",
@@ -131,14 +139,25 @@ navLinks.forEach(link => {
         link.classList.add("current");
     } else if (pathname == "/cooking/" || pathname == "/") {
         navLinks[0].classList.add("current");
+    } else if (pathname == "/city.html") {
+        navLinks[1].classList.add("current");
     }
 });
 
-let ticker = document.querySelector(".ticker");
-if (ticker) {
-    let tickerList = document.querySelector(".ticker-list"),
-        tickerItems = document.querySelector(".ticker-items"),
-        clone = tickerItems.cloneNode(true);
-    
-    tickerList.prepend(clone);
+let watchVideoButton = document.querySelector(".watch-video-button");
+let mediaImage = document.querySelector(".media-image");
+let mediaVideo = document.querySelector(".media-video");
+if (watchVideoButton) {
+    watchVideoButton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        mediaImage.classList.add("hidden");
+        setTimeout(() => {
+            mediaImage.style.display = "none";
+            mediaVideo.style.display = "block";
+            setTimeout(() => {
+                mediaVideo.classList.remove("hidden");
+            }, 50);
+        }, 300);
+    });
 }
